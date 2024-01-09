@@ -7,6 +7,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import java.io.IOException;
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -15,7 +16,10 @@ import java.io.IOException;
  */
 public class EncodingRequestFilter implements Filter {
 
+    private final Logger logger;
+
     public EncodingRequestFilter() {
+        logger = Logger.getLogger(EncodingRequestFilter.class);
     }
 
     /**
@@ -25,7 +29,7 @@ public class EncodingRequestFilter implements Filter {
      */
     @Override
     public void init(FilterConfig filterConfig) {
-
+        logger.debug("Запущена инициализация фильтра");
     }
 
     /**
@@ -39,9 +43,24 @@ public class EncodingRequestFilter implements Filter {
      */
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
-        chain.doFilter(request, response);
+        logger.debug("Выполняется фильтр");
+        try {
+            request.setCharacterEncoding("UTF-8");
+            response.setCharacterEncoding("UTF-8");
+            chain.doFilter(request, response);
+        } catch (IOException ex) {
+            StringBuilder logBuilder=new StringBuilder();
+            logBuilder.append("Программная ошибка при работе фильтра для изменения кодировки запросов");
+            logBuilder.append("\n");
+            logBuilder.append(ex.getMessage());
+            logBuilder.append("\n");
+            StackTraceElement[] stackTrace = ex.getStackTrace();
+            for (StackTraceElement element : stackTrace) {
+                logBuilder.append(element.toString());
+                logBuilder.append("\n");
+            }
+            logger.error(logBuilder.toString());
+        }
     }
 
     /**
@@ -49,5 +68,6 @@ public class EncodingRequestFilter implements Filter {
      */
     @Override
     public void destroy() {
+        logger.debug("Фильтр завершил работу");
     }
 }

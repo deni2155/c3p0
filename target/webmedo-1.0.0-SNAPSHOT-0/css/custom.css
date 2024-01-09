@@ -1,0 +1,18 @@
+body{
+    background-color:#9fc3e7;
+}
+
+/*
+
+Общий дизайн кнопок
+
+*/
+.btn-custom{
+    background-color:#275996;
+    color:#EDF8FF;
+}
+
+.btn-custom:hover{
+    background-color:#133457;
+    color:#EDF8FF;
+}

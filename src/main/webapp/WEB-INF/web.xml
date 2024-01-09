@@ -7,6 +7,9 @@
         <filter-name>EncodingRequestFilter</filter-name>
         <filter-class>ru.kindcat.webmedo.filters.coding.EncodingRequestFilter</filter-class>
     </filter>
+    <!--
+Фильтр авторизации
+    -->
     <filter>
         <filter-name>ExistsSessionFilter</filter-name>
         <filter-class>ru.kindcat.webmedo.filters.signin.ExistsSessionFilter</filter-class>
