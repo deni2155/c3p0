@@ -1,6 +1,10 @@
 /home/dreamer/NetBeansProjects/webmedo/src/main/java/ru/kindcat/webmedo/JakartaRestConfiguration.java
+/home/dreamer/NetBeansProjects/webmedo/src/main/java/ru/kindcat/webmedo/context/ReinitializingContext.java
+/home/dreamer/NetBeansProjects/webmedo/src/main/java/ru/kindcat/webmedo/db/dao/UserDao.java
+/home/dreamer/NetBeansProjects/webmedo/src/main/java/ru/kindcat/webmedo/db/utils/pool/ConnectionPool.java
 /home/dreamer/NetBeansProjects/webmedo/src/main/java/ru/kindcat/webmedo/filters/coding/EncodingRequestFilter.java
 /home/dreamer/NetBeansProjects/webmedo/src/main/java/ru/kindcat/webmedo/filters/signin/ExistsSessionFilter.java
 /home/dreamer/NetBeansProjects/webmedo/src/main/java/ru/kindcat/webmedo/links/archive/ArchiveServlet.java
 /home/dreamer/NetBeansProjects/webmedo/src/main/java/ru/kindcat/webmedo/links/signin/SignInServlet.java
 /home/dreamer/NetBeansProjects/webmedo/src/main/java/ru/kindcat/webmedo/resources/JakartaEE91Resource.java
+/home/dreamer/NetBeansProjects/webmedo/src/main/java/ru/kindcat/webmedo/sevlets/CreateSessionServlet.java

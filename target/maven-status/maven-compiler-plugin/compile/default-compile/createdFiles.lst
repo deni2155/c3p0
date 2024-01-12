@@ -1,4 +1,8 @@
-ru/kindcat/webmedo/filters/signin/ExistsSessionFilter.class
+ru/kindcat/webmedo/db/dao/UserDao.class
+ru/kindcat/webmedo/db/utils/pool/ConnectionPool.class
 ru/kindcat/webmedo/links/signin/SignInServlet.class
+ru/kindcat/webmedo/filters/signin/ExistsSessionFilter.class
 ru/kindcat/webmedo/filters/coding/EncodingRequestFilter.class
 ru/kindcat/webmedo/links/archive/ArchiveServlet.class
+ru/kindcat/webmedo/sevlets/CreateSessionServlet.class
+ru/kindcat/webmedo/context/ReinitializingContext.class

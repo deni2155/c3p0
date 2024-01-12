@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 /**
  *
  * @author dreamer
- * @version webmedo-1.0.0-SNAPSHOT-0
+ * @version webmedo-1.0.0-SNAPSHOT-0 Класс для перекодирования всех сервлетов
  */
 public class EncodingRequestFilter implements Filter {
 
@@ -49,7 +49,7 @@ public class EncodingRequestFilter implements Filter {
             response.setCharacterEncoding("UTF-8");
             chain.doFilter(request, response);
         } catch (IOException ex) {
-            StringBuilder logBuilder=new StringBuilder();
+            StringBuilder logBuilder = new StringBuilder();
             logBuilder.append("Программная ошибка при работе фильтра для изменения кодировки запросов");
             logBuilder.append("\n");
             logBuilder.append(ex.getMessage());

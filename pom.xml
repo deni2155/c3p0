@@ -3,9 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.kindcat</groupId>
     <artifactId>webmedo</artifactId>
-    <version>1.0.0-SNAPSHOT-0</version>
+    <version>1.0.0-SNAPSHOT-2</version>
     <packaging>war</packaging>
-    <name>webmedo-1.0.0-SNAPSHOT-0</name>
+    <!--name>webmedo-1.0.0-SNAPSHOT-1</name-->
+    <name>webmedo</name>
     
     <properties>
         <maven.compiler.release>11</maven.compiler.release>
@@ -36,8 +37,36 @@
             <artifactId>slf4j-reload4j</artifactId>
             <version>2.0.9</version>
         </dependency>
+        <!--базы данных-->
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql 
+        из каталога WebMedo/target/lib скопировал jar-файл драйвера в каталог tomcat/lib что бы избежать утечки памяти при работе с hibernate
+        -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.6.0</version>
+        </dependency>
+        <!--pool соединений для БД-->
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+        <!--dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.10.0</version>
+        </dependency-->
+        <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.5</version>
+        </dependency>
+        <!--Шифрование-->
+        <!-- https://mvnrepository.com/artifact/org.mindrot/jbcrypt -->
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
     </dependencies>
-    
     <build>
         <plugins>
             <plugin>

@@ -16,6 +16,7 @@ import org.apache.log4j.Logger;
  *
  * @author dreamer
  * @version 1.0.0-SNAPSHOT-0
+ * Класс для проверки существования сессии пользователя
  */
 public class ExistsSessionFilter implements Filter {
 

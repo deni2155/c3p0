@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  *
- * @author dreamer 1.0.0-SNAPSHOT-0
+ * @author dreamer 1.0.0-SNAPSHOT-0 Ссылка на страницу входа
  */
 @WebServlet(name = "SignInServlet", urlPatterns = {"/signInServlet"})
 public class SignInServlet extends HttpServlet {
