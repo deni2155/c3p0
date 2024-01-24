@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.kindcat</groupId>
     <artifactId>webmedo</artifactId>
-    <version>1.0.0-SNAPSHOT-2</version>
+    <version>1.0.0-SNAPSHOT-3</version>
     <packaging>war</packaging>
     <!--name>webmedo-1.0.0-SNAPSHOT-1</name-->
-    <name>webmedo</name>
+    <name>c3p0</name>
     
     <properties>
         <maven.compiler.release>11</maven.compiler.release>
